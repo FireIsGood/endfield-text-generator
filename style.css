@@ -147,12 +147,23 @@ canvas {
   margin-inline: auto;
 }
 
+button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25em 0.5em;
+}
+
+input {
+  border-radius: unset;
+  border: unset;
+}
+
 /* Helper classes */
 
 .container {
   max-width: 960px;
   margin-inline: auto;
-  padding: 1.5rem 1rem;
+  padding: 1.25rem 1rem;
 
   &:has(+ .container) {
     margin-bottom: 1rem;
@@ -188,4 +199,11 @@ canvas {
     var(--c2) 22px,
     var(--c1) 24px
   );
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }

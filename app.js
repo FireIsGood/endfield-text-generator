@@ -1,6 +1,7 @@
 const canvas = document.getElementById("output-canvas");
 const ctx = canvas.getContext("2d");
 let bgImg = null;
+let fileName = "image";
 
 function fileToImage(file) {
   return new Promise((resolve, _reject) => {
@@ -16,8 +17,38 @@ function fileToImage(file) {
   });
 }
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+function saveImage() {
+  const data = canvas.toDataURL("image/png");
+  const dummy = document.createElement("a");
+  dummy.href = data;
+  const parsedFileName = fileName.replace(/\.[^/.]+$/, "");
+  dummy.download = `${parsedFileName}.png`; // file name
+  dummy.click();
+  dummy.remove();
+}
+
+let copyButtonTimeout = null;
+const copyButtonText = document.getElementById("copy-image").textContent;
+async function copyImage() {
+  document.getElementById("copy-image").textContent = "Loading...";
+  await new Promise((resolve) => {
+    canvas.toBlob((blob) => {
+      navigator.clipboard
+        .write([
+          new ClipboardItem({
+            [blob.type]: blob,
+          }),
+        ])
+        .then(() => {
+          resolve();
+        });
+    });
+  });
+  document.getElementById("copy-image").textContent = "Copied to clipboard!";
+  clearTimeout(copyButtonTimeout);
+  setTimeout(() => {
+    document.getElementById("copy-image").textContent = copyButtonText;
+  }, 800);
 }
 
 async function draw() {
@@ -27,6 +58,7 @@ async function draw() {
   // Image
   const file = document.getElementById("image-input")?.files[0];
   if (file) {
+    fileName = file.name;
     const image = await fileToImage(file);
     imageWidth = image.width;
     imageHeight = image.height;
@@ -96,7 +128,14 @@ async function draw() {
 function init() {
   document
     .querySelectorAll("input")
-    .forEach((e) => e.addEventListener("input", draw));
+    .forEach((e) => e.addEventListener("input", () => draw()));
+
+  document
+    .getElementById("save-image")
+    .addEventListener("click", () => saveImage());
+  document
+    .getElementById("copy-image")
+    .addEventListener("click", () => copyImage());
 
   bgImg = new Image();
   bgImg.crossOrigin = "anonymous";
