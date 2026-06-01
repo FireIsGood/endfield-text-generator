@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- SEO -->
+    <title>Endfield Text Generator</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- CSS -->
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JS -->
+  </head>
+  <body>
+    <header class="header container">
+      <h1>ENDFIELD TITLE GENERATOR</h1>
+    </header>
+    <main>
+      <section class="container outlined">
+        <div class="canvas-box">
+          <canvas id="output-canvas" width="1280" height="720"></canvas>
+        </div>
+      </section>
+      <section class="container card">
+        <h2>Controls</h2>
+        <div class="field">
+          <label for="image-input">Base Image (optional)</label>
+          <input type="file" id="image-input" />
+        </div>
+        <div class="field">
+          <label for="title-input">Title</label>
+          <input type="text" id="title-input" placeholder="Sample Text" />
+        </div>
+        <div class="field">
+          <label for="subtitle-input">Subtitle override</label>
+          <input type="text" id="subtitle-input" placeholder="Sample Text" />
+        </div>
+        <div class="field">
+          <label for="subtitle-input">Font size override</label>
+          <input type="number" id="font-size-input" placeholder="180" />
+        </div>
+        <div class="field">
+          <label for="subtitle-offset-input">Subtitle Offset</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value="50"
+            id="subtitle-offset-input"
+          />
+        </div>
+        <div class="field">
+          <label for="overlay-opacity-input">Overlay Opacity</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            value="50"
+            id="overlay-opacity-input"
+          />
+        </div>
+        <div class="field">
+          <label for="vertical-offset-input">Vertical Offset</label>
+          <input type="number" value="0" id="vertical-offset-input" />
+        </div>
+      </section>
+    </main>
+    <footer class="container">
+      <ul>
+        <li>Created by <a href="https://fireis.dev">FireIsGood</a></li>
+        <li><a href="/">Source Code</a></li>
+      </ul>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Novecento sans wide Book';
+    src: url('Novecentosanswide-Bold.woff2') format('woff2'),
+        url('Novecentosanswide-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Novecento sans wide';
+    src: url('Novecentosanswide-Light.woff2') format('woff2'),
+        url('Novecentosanswide-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Novecento sans wide Normal';
+    src: url('Novecentosanswide-Normal.woff2') format('woff2'),
+        url('Novecentosanswide-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
