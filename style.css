@@ -38,53 +38,6 @@
   font-display: swap;
 }
 
-/* :root {
-  --theme-font-family: Onest, Sans-Serif;
-  --theme-font-weight: 400;
-  --theme-text-transform: none;
-  --theme-text-decoration: none;
-  --theme-font-size: 1rem;
-  --theme-line-height: 1.65;
-  --theme-letter-spacing: 0em;
-  --theme-button-font-weight: 500;
-  --theme-button-font-size: 15px;
-  --has-classic-forms: var(--true);
-  --has-modern-forms: var(--false);
-  --theme-form-field-border-initial-color: var(--theme-border-color);
-  --theme-form-field-border-focus-color: var(--theme-palette-color-1);
-  --theme-form-selection-field-initial-color: var(--theme-border-color);
-  --theme-form-selection-field-active-color: var(--theme-palette-color-1);
-  --theme-palette-color-1: #fff500;
-  --theme-palette-color-2: #fff500;
-  --theme-palette-color-3: #b0bac5;
-  --theme-palette-color-4: #ffffff;
-  --theme-palette-color-5: #434a56;
-  --theme-palette-color-6: #20252b;
-  --theme-palette-color-7: #13171b;
-  --theme-palette-color-8: #20252b;
-  --theme-text-color: var(--theme-palette-color-3);
-  --theme-link-initial-color: var(--theme-palette-color-1);
-  --theme-link-hover-color: var(--theme-palette-color-2);
-  --theme-selection-text-color: #ffffff;
-  --theme-selection-background-color: var(--theme-palette-color-1);
-  --theme-border-color: var(--theme-palette-color-5);
-  --theme-headings-color: var(--theme-palette-color-4);
-  --theme-content-spacing: 1.5em;
-  --theme-button-min-height: 30px;
-  --theme-button-text-initial-color: #ffffff;
-  --theme-button-text-hover-color: #ffffff;
-  --theme-button-background-initial-color: var(--theme-palette-color-1);
-  --theme-button-background-hover-color: var(--theme-palette-color-2);
-  --theme-button-border: none;
-  --theme-button-border-radius: 5px;
-  --theme-button-padding: 5px 15px;
-  --theme-normal-container-max-width: 1290px;
-  --theme-content-vertical-spacing: 25px;
-  --theme-container-edge-spacing: 90vw;
-  --theme-narrow-container-max-width: 750px;
-  --theme-wide-offset: 130px;
-} */
-
 *,
 *::before,
 *::after {
